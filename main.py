@@ -1,8 +1,12 @@
-import sqlite3
-con = sqlite3.connect("crud.db")
+import PersonaDatos as per
 
-cur = con.cursor()
-
-valores = ("Rambo",1999,8)
-res=cur.execute("SELECT * FROM peliculas where id=547")
-print(res.fetchone())
+persona ={
+         "dni":"1233",
+         "nombre":"Camilo",
+         "edad":14,
+         "apellido":"Serna",
+         "direccion":"Calle 45",
+         "correo":"c@c.co"
+         }
+res=per.save(persona)
+print(res)
