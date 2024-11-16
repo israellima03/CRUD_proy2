@@ -1,4 +1,5 @@
 import PersonaDatos as per
 
-res = per.findAll()
-print(res.get('personas'))
+persona = {'edad':15, 'ci': '1237', 'nombre': "Daniel", 'apellido': 'Castillo', 'direccion': 'calle', 'correo': '222@'}
+res = per.find("1237")
+print(res)
